@@ -3,8 +3,11 @@ function Counter(props) {
     <div className="Counter">
       <small>{props.label}</small>
       <h1>{props.value}</h1>
-      <button onClick={props.increment}>+</button>
-      <button onClick={props.decrement}>-</button>
+      <div className="buttons">
+        <button onClick={props.increment}>+</button>
+        <button onClick={props.decrement}>-</button>
+        <button onClick={props.remove}>➖ Remove</button>
+      </div>
     </div>
   );
 }

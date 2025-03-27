@@ -23,6 +23,12 @@ function App() {
     setCounts([...counts, 0]);
   };
 
+  const removeCounter = (index) => {
+    const newCounts = [...counts];
+    newCounts.splice(index, 1);
+    setCounts(newCounts);
+  };
+
   const totalCount = counts.reduce((sum, current) => sum + current, 0);
 
   return (
@@ -39,6 +45,7 @@ function App() {
           value={value}
           increment={() => updateCount(index, 1)}
           decrement={() => updateCount(index, -1)}
+          remove={() => removeCounter(index)}
         />
       ))}
     </div>
