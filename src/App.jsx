@@ -19,13 +19,19 @@ function App() {
     setCounts(counts.map(() => 0));
   };
 
-  // Calculate total using reduce
+  const addCounter = () => {
+    setCounts([...counts, 0]);
+  };
+
   const totalCount = counts.reduce((sum, current) => sum + current, 0);
 
   return (
     <div className="App">
       <h1>Total Count: {totalCount}</h1>
-      <button onClick={resetAll}>Reset All</button>
+      <div className="controls">
+        <button onClick={resetAll}>Reset All</button>
+        <button onClick={addCounter}>➕ Add Counter</button>
+      </div>
       {counts.map((value, index) => (
         <Counter
           key={index}
