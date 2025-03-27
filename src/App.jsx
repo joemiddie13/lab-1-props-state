@@ -7,8 +7,12 @@ function App() {
 
   const updateCount = (index, delta) => {
     const newCounts = [...counts];
-    newCounts[index] += delta;
-    setCounts(newCounts);
+    const newValue = newCounts[index] + delta;
+    
+    if (newValue >= 0 && newValue <= 10) {
+      newCounts[index] = newValue;
+      setCounts(newCounts);
+    }
   };
 
   const resetAll = () => {
