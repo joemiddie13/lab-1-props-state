@@ -2,6 +2,8 @@
 
 A cyberpunk-themed counter application built with React that demonstrates the fundamental concepts of props, state, and lifting state in React applications.
 
+<img width="430" alt="image" src="https://github.com/user-attachments/assets/8ee8b2e7-97cb-40b7-aeda-4030ff832214" />
+
 ## Overview
 
 This project was created as part of the ACS 3330 course to explore and implement key React concepts:
